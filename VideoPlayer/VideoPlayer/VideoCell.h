@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "zacharyPlayView.h"
 #define VIEW_SCREEN [UIScreen mainScreen]
 #define baseVideoWidth (VIEW_SCREEN.bounds.size.width)
 #define VIDEO_SIZE_RATE (4.0 / 3.0)
@@ -15,6 +15,7 @@
 
 @interface VideoCell : UITableViewCell
 @property(nonatomic,strong)NSString *filePath;
+@property(nonatomic,strong)zacharyPlayView *playView;
 
 
 

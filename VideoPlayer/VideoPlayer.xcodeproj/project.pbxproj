@@ -15,8 +15,6 @@
 		338237BA1CCF60BA00D49B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338237B81CCF60BA00D49B6D /* LaunchScreen.storyboard */; };
 		338237C51CCF60BA00D49B6D /* VideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 338237C41CCF60BA00D49B6D /* VideoPlayerTests.m */; };
 		338237D01CCF60BA00D49B6D /* VideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 338237CF1CCF60BA00D49B6D /* VideoPlayerUITests.m */; };
-		338237E31CCF639500D49B6D /* VideoPlayOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 338237E21CCF639500D49B6D /* VideoPlayOperation.m */; };
-		338237E61CCF63E200D49B6D /* ZacharyPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 338237E51CCF63E200D49B6D /* ZacharyPlayManager.m */; };
 		338237EA1CCF670F00D49B6D /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 338237E81CCF670F00D49B6D /* VideoCell.m */; };
 		338237EB1CCF670F00D49B6D /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 338237E91CCF670F00D49B6D /* VideoCell.xib */; };
 		338238101CCF72CE00D49B6D /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 338238061CCF726200D49B6D /* 1.mp4 */; };
@@ -24,6 +22,8 @@
 		338238121CCF72CE00D49B6D /* 3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 338238081CCF726200D49B6D /* 3.mp4 */; };
 		338238131CCF72CE00D49B6D /* 4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 338238091CCF726200D49B6D /* 4.mp4 */; };
 		338238141CCF72CE00D49B6D /* 5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3382380A1CCF726200D49B6D /* 5.mp4 */; };
+		B62D53FB1D9D197500CA4A7E /* zacharyPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B62D53FA1D9D197500CA4A7E /* zacharyPlayView.m */; };
+		B62D54051D9D2C1D00CA4A7E /* ZacharyPlayOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B62D54041D9D2C1D00CA4A7E /* ZacharyPlayOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +60,6 @@
 		338237CB1CCF60BA00D49B6D /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		338237CF1CCF60BA00D49B6D /* VideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerUITests.m; sourceTree = "<group>"; };
 		338237D11CCF60BA00D49B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		338237E11CCF639500D49B6D /* VideoPlayOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoPlayOperation.h; path = ZacharyPlay/VideoPlayOperation.h; sourceTree = "<group>"; };
-		338237E21CCF639500D49B6D /* VideoPlayOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoPlayOperation.m; path = ZacharyPlay/VideoPlayOperation.m; sourceTree = "<group>"; };
-		338237E41CCF63E200D49B6D /* ZacharyPlayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZacharyPlayManager.h; path = ZacharyPlay/ZacharyPlayManager.h; sourceTree = "<group>"; };
-		338237E51CCF63E200D49B6D /* ZacharyPlayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZacharyPlayManager.m; path = ZacharyPlay/ZacharyPlayManager.m; sourceTree = "<group>"; };
 		338237E71CCF670F00D49B6D /* VideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
 		338237E81CCF670F00D49B6D /* VideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
 		338237E91CCF670F00D49B6D /* VideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
@@ -72,6 +68,11 @@
 		338238081CCF726200D49B6D /* 3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.mp4; sourceTree = "<group>"; };
 		338238091CCF726200D49B6D /* 4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.mp4; sourceTree = "<group>"; };
 		3382380A1CCF726200D49B6D /* 5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.mp4; sourceTree = "<group>"; };
+		B62D53F91D9D197500CA4A7E /* zacharyPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zacharyPlayView.h; path = ZacharyPlay/zacharyPlayView.h; sourceTree = "<group>"; };
+		B62D53FA1D9D197500CA4A7E /* zacharyPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = zacharyPlayView.m; path = ZacharyPlay/zacharyPlayView.m; sourceTree = "<group>"; };
+		B62D54031D9D2C1D00CA4A7E /* ZacharyPlayOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZacharyPlayOperation.h; path = ZacharyPlay/ZacharyPlayOperation.h; sourceTree = "<group>"; };
+		B62D54041D9D2C1D00CA4A7E /* ZacharyPlayOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZacharyPlayOperation.m; path = ZacharyPlay/ZacharyPlayOperation.m; sourceTree = "<group>"; };
+		B62D54091D9D6D5C00CA4A7E /* ZacharyPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZacharyPlay.h; path = ZacharyPlay/ZacharyPlay.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +166,11 @@
 		338237DD1CCF621700D49B6D /* zacharyPlay */ = {
 			isa = PBXGroup;
 			children = (
-				338237E11CCF639500D49B6D /* VideoPlayOperation.h */,
-				338237E21CCF639500D49B6D /* VideoPlayOperation.m */,
-				338237E41CCF63E200D49B6D /* ZacharyPlayManager.h */,
-				338237E51CCF63E200D49B6D /* ZacharyPlayManager.m */,
+				B62D53F91D9D197500CA4A7E /* zacharyPlayView.h */,
+				B62D53FA1D9D197500CA4A7E /* zacharyPlayView.m */,
+				B62D54031D9D2C1D00CA4A7E /* ZacharyPlayOperation.h */,
+				B62D54041D9D2C1D00CA4A7E /* ZacharyPlayOperation.m */,
+				B62D54091D9D6D5C00CA4A7E /* ZacharyPlay.h */,
 			);
 			name = zacharyPlay;
 			sourceTree = "<group>";
@@ -325,10 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338237E61CCF63E200D49B6D /* ZacharyPlayManager.m in Sources */,
+				B62D53FB1D9D197500CA4A7E /* zacharyPlayView.m in Sources */,
+				B62D54051D9D2C1D00CA4A7E /* ZacharyPlayOperation.m in Sources */,
 				338237EA1CCF670F00D49B6D /* VideoCell.m in Sources */,
 				338237B21CCF60BA00D49B6D /* ViewController.m in Sources */,
-				338237E31CCF639500D49B6D /* VideoPlayOperation.m in Sources */,
 				338237AF1CCF60BA00D49B6D /* AppDelegate.m in Sources */,
 				338237AC1CCF60BA00D49B6D /* main.m in Sources */,
 			);

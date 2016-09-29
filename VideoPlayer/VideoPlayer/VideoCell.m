@@ -7,7 +7,6 @@
 //
 
 #import "VideoCell.h"
-#import "ZacharyPlayManager.h"
 
 @implementation VideoCell
 
@@ -16,81 +15,25 @@
     // Initialization code
 }
 
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self=[super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.playView=[[zacharyPlayView alloc]initWithPlayType:AtLeastOnce];
+        [self.contentView addSubview: _playView];
+        
+    }
+    return self;
+}
 
 -(void)setData:(id)cellData
 {
-    if ([cellData isKindOfClass:[NSString class]]) {
-        self.filePath=cellData;
-        [self reloadStart];
-        
-        
-    }
-
+    NSURL *url=[NSURL fileURLWithPath:cellData];
+    [self.contentView addSubview:_playView];
+    
+    [_playView  playWithUrl:url];
 }
 
--(void)startVideo
-{
-    __weak typeof(self) weakSelf=self;
-    
-    [[ZacharyPlayManager sharedInstance]startWithLocalPath:_filePath WithVideoBlock:^(CGImageRef imageData, NSString *filePath) {
-        // NSLog(@"%@",filePath);
-        if ([filePath isEqualToString:_filePath]) {
-            weakSelf.contentView.layer.contents=(__bridge id _Nullable)(imageData);
-            
-        }
-        
-        
-        
-    }];
-    
-    
-    
-}
-
-//Repeat play
--(void)reloadStart
-{
-    __weak typeof(self) weakSelf=self;
-    [[ZacharyPlayManager sharedInstance]startWithLocalPath:_filePath WithVideoBlock:^(CGImageRef imageData, NSString *filePath) {
-        if ([filePath isEqualToString:weakSelf.filePath]) {
-            weakSelf.contentView.layer.contents=(__bridge id _Nullable)(imageData);
-            
-        }
-        
-        
-        
-    }];
-    
-    [[ZacharyPlayManager sharedInstance]reloadVideo:^(NSString *filePath) {
-        MAIN(^{
-            if ([filePath isEqualToString:weakSelf.filePath]) {
-                [weakSelf reloadStart];
-                
-                
-                
-                
-                
-            }
-            
-            
-            
-        });
-        
-        
-    } withFile:_filePath];
-    
-    
-}
-
-
--(void)dealloc
-{
-    
-    
-     //if viewController dellaoc   all Video  will cancel
-    [[ZacharyPlayManager sharedInstance]cancelAllVideo];
-    
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

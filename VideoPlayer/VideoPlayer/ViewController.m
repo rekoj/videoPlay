@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "VideoCell.h"
-#import "ZacharyPlayManager.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @end
@@ -33,18 +32,6 @@ NSString  *const cellName=@"VideoCell";
     [videoArray addObjectsFromArray:videoArray];
     
 }
-
-
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0);
-{
-    //if cell is recovery.the video cancel
-        VideoCell *tpCell=(VideoCell *)cell;
-        [[ZacharyPlayManager sharedInstance]cancelVideo:tpCell.filePath];
-    
-    
-    
-}
-
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
